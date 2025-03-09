@@ -53,9 +53,15 @@ Ejemplos de transformaciones:
 Se ha creado el modelo de datos en una base de datos Postgres
 
 ```sql
-CREATE TABLE provincias (
+CREATE TABLE comunidades_autonomas (
     id SERIAL PRIMARY KEY,
     nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE provincias (
+    id SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL,
+    comunidad_autonoma_id INT REFERENCES comunidades_autonomas(id) ON DELETE CASCADE
 );
 
 CREATE TABLE airbnb (
@@ -64,6 +70,7 @@ CREATE TABLE airbnb (
     name TEXT,
     host_id BIGINT,
     host_name TEXT,
+    neighbourhood_group TEXT,
     neighbourhood TEXT,
     latitude FLOAT,
     longitude FLOAT,
@@ -83,20 +90,22 @@ CREATE TABLE airbnb (
 CREATE TABLE precios_vivienda (
     id SERIAL PRIMARY KEY,
     provincia_id INT REFERENCES provincias(id) ON DELETE CASCADE,
+    fecha DATE NOT NULL,
     precio_m2 NUMERIC,
     variacion_mensual NUMERIC,
     variacion_trimestral NUMERIC,
     variacion_anual NUMERIC,
-    maximo_historico NUMERIC,
-    variacion_maximo NUMERIC
+    es_alquiler BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE ocupacion_hotelera (
     id SERIAL PRIMARY KEY,
-    provincia_id INT REFERENCES provincias(id) ON DELETE CASCADE,
-    indicador TEXT,
-    periodo DATE,
-    total NUMERIC
+    comunidad_autonoma_id INT REFERENCES comunidades_autonomas(id) ON DELETE CASCADE,
+    establecimientos NUMERIC,
+    plazas NUMERIC,
+    personal_empleado NUMERIC,
+    iph NUMERIC,
+    periodo DATE
 );
 ```
 
@@ -141,3 +150,13 @@ WHERE o.indicador = 'Grado de ocupacion por plazas'
 GROUP BY p.nombre
 ORDER BY total_airbnb DESC;
 ```
+
+# Tareas pendientes
+- [ ] Crear tabla CCAA
+- [ ] Cargar datos de CCAA
+- [ ] Crear relaciones con tabla provincias
+- [ ] Cargar datos de ocupación hotelera: https://www.ine.es/jaxiT3/Tabla.htm?t=25173, https://www.ine.es/jaxiT3/Tabla.htm?t=2942
+- [ ] Crear tabla de precios de alquiler
+- [ ] Cargar datos de precios de alquiler: https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/historico/
+- [ ] Crear tabla de precios de venta
+- [ ] Cargar datos de precios de venta: https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/historico/
