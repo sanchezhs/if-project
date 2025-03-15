@@ -4,15 +4,23 @@
 https://insideairbnb.com/get-the-data/
 
 ## INE
-Establecimientos, plazas, grados de ocupación y personal empleado por comunidades autónomas y provincias
-https://www.ine.es/jaxiT3/Tabla.htm?t=2066&L=0
+Datos de ocupación hotelera: 
+
+- https://www.ine.es/jaxiT3/Tabla.htm?t=25173
+- https://www.ine.es/jaxiT3/Tabla.htm?t=2942
+- https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177015&menu=ultiDatos&idp=1254735576863
+- Gasto de los turistas internacionales según motivo principal del viaje: https://www.ine.es/jaxiT3/Tabla.htm?t=23995
+- Gasto de los turistas internacionales según país de residencia: https://www.ine.es/jaxiT3/Tabla.htm?t=10838
+- Gasto de los turistas internacionales según comunidad autónoma de destino principal: https://www.ine.es/jaxiT3/Tabla.htm?t=10839
 
 ## Idealista
-Informe de precios de venta en España de 2024
-https://www.idealista.com/press-room/property-price-reports/sale/1/report/2024/
+Informe de precios de venta en España 2006-2024
+- https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/historico/
 
-Informe de precios de alquiler en España de 2024
-https://www.idealista.com/press-room/property-price-reports/rent/1/report/2024/
+
+Informe de precios de alquiler en España 2006-2024
+- https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/historico/
+
 
 # Paso 2: Procesamiento de datos
 Los datos se han descargado en formato CSV y se han procesado con Python y Pandas.
@@ -53,9 +61,14 @@ Ejemplos de transformaciones:
 Se ha creado el modelo de datos en una base de datos Postgres
 
 ```sql
-CREATE TABLE comunidades_autonomas (
+CREATE TABLE IF NOT EXISTS pais (
     id SERIAL PRIMARY KEY,
-    nombre TEXT UNIQUE NOT NULL
+    nombre VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS comunidad_autonoma (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(255)
 );
 
 CREATE TABLE provincias (
@@ -87,25 +100,68 @@ CREATE TABLE airbnb (
     provincia_id INT REFERENCES provincias(id) ON DELETE CASCADE
 );
 
-CREATE TABLE precios_vivienda (
+CREATE TABLE IF NOT EXISTS precios_vivienda (
     id SERIAL PRIMARY KEY,
-    provincia_id INT REFERENCES provincias(id) ON DELETE CASCADE,
-    fecha DATE NOT NULL,
+    año INT,
+    comunidad_autonoma_id INT REFERENCES comunidad_autonoma(id) ON DELETE CASCADE,
     precio_m2 NUMERIC,
     variacion_mensual NUMERIC,
     variacion_trimestral NUMERIC,
     variacion_anual NUMERIC,
-    es_alquiler BOOLEAN DEFAULT FALSE
+    es_alquiler BOOLEAN
 );
 
-CREATE TABLE ocupacion_hotelera (
+CREATE TABLE IF NOT EXISTS sector_hotelero (
     id SERIAL PRIMARY KEY,
-    comunidad_autonoma_id INT REFERENCES comunidades_autonomas(id) ON DELETE CASCADE,
-    establecimientos NUMERIC,
-    plazas NUMERIC,
-    personal_empleado NUMERIC,
-    iph NUMERIC,
-    periodo DATE
+    periodo DATE UNIQUE,
+    pernoctaciones INT,
+    estancia_media FLOAT,
+    grado_ocupacion FLOAT,
+    tarifa_media NUMERIC(10,2),
+    indice_precios FLOAT
+);
+
+CREATE TABLE IF NOT EXISTS ocupacion_hotelera (
+    id SERIAL PRIMARY KEY,
+    comunidad_autonoma_id INT REFERENCES comunidad_autonoma(id) ON DELETE CASCADE,
+    tipo_alojamiento TEXT,
+    periodo DATE,
+    establecimientos_abiertos INT,
+    plazas INT,
+    personal INT,
+    iph FLOAT
+);
+
+CREATE TABLE IF NOT EXISTS gasto_turistas_pais (
+    id SERIAL PRIMARY KEY,
+    periodo DATE NOT NULL,
+    pais_id INT REFERENCES pais(id) ON DELETE CASCADE,
+    gasto_medio_persona NUMERIC NOT NULL,
+    gasto_medio_diario NUMERIC NOT NULL,
+    duracion_media_viaje NUMERIC NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS gasto_turistas_destino (
+    id SERIAL PRIMARY KEY,
+    periodo DATE NOT NULL,
+    comunidad_autonoma_id INT REFERENCES comunidad_autonoma(id) ON DELETE CASCADE,
+    gasto_medio_persona NUMERIC NOT NULL,
+    gasto_medio_diario NUMERIC NOT NULL,
+    duracion_media_viaje NUMERIC NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS motivo_viaje (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS gasto_turistas_motivo (
+    id SERIAL PRIMARY KEY,
+    periodo INT NULL,
+    motivo_viaje_id INT REFERENCES motivo_viaje(id) ON DELETE CASCADE,
+    gasto_medio_persona NUMERIC,
+    gasto_medio_diario NUMERIC,
+    duracion_media_viaje NUMERIC
 );
 ```
 

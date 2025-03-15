@@ -1,0 +1,136 @@
+periodo,motivo_viaje,gasto_medio_persona,gasto_medio_diario,duracion_media_viaje
+2016,"Asistencia a ferias, congresos y convenciones",331.0,1324.0,4.0
+2016,"Compras, servicios personales",153.0,604.0,3.94
+2016,Estudios (educacion y formacion),87.0,2854.0,32.67
+2016,Motivos religiosos o peregrinaciones,102.0,1294.0,12.63
+2016,"Negocio, motivos profesionales",202.0,1137.0,5.63
+2016,"Ocio, recreo y vacaciones",132.0,1016.0,7.67
+2016,Otro tipo de ocio,150.0,995.0,6.62
+2016,Otros,93.0,751.0,8.05
+2016,Otros motivos de trabajo y negocio,208.0,1098.0,5.27
+2016,Practica deportiva,153.0,977.0,6.37
+2016,Trabajador estacional temporero,96.0,1500.0,15.62
+2016,Tratamiento de salud voluntario,187.0,1422.0,7.6
+2016,Turismo cultural,184.0,1069.0,5.82
+2016,Turismo de sol y playa,119.0,1015.0,8.51
+2016,Visitas a familiares o amigos,91.0,797.0,8.72
+2017,"Asistencia a ferias, congresos y convenciones",320.0,1418.0,4.42
+2017,"Compras, servicios personales",186.0,862.0,4.63
+2017,Estudios (educacion y formacion),94.0,3082.0,32.87
+2017,Motivos religiosos o peregrinaciones,101.0,1188.0,11.82
+2017,"Negocio, motivos profesionales",192.0,1155.0,6.0
+2017,"Ocio, recreo y vacaciones",139.0,1053.0,7.57
+2017,Otro tipo de ocio,163.0,1040.0,6.37
+2017,Otros,114.0,628.0,5.53
+2017,Otros motivos de trabajo y negocio,201.0,1140.0,5.69
+2017,Practica deportiva,161.0,986.0,6.14
+2017,Trabajador estacional temporero,105.0,1118.0,10.62
+2017,Tratamiento de salud voluntario,146.0,1611.0,11.03
+2017,Turismo cultural,169.0,1084.0,6.42
+2017,Turismo de sol y playa,123.0,1051.0,8.53
+2017,Visitas a familiares o amigos,98.0,881.0,8.95
+2018,"Asistencia a ferias, congresos y convenciones",339.0,1259.0,3.71
+2018,"Compras, servicios personales",146.0,714.0,4.88
+2018,Estudios (educacion y formacion),94.0,3764.0,39.9
+2018,Motivos religiosos o peregrinaciones,102.0,1332.0,13.06
+2018,"Negocio, motivos profesionales",209.0,1084.0,5.2
+2018,"Ocio, recreo y vacaciones",147.0,1082.0,7.34
+2018,Otro tipo de ocio,169.0,1095.0,6.47
+2018,Otros,125.0,784.0,6.28
+2018,Otros motivos de trabajo y negocio,221.0,1070.0,4.84
+2018,Practica deportiva,160.0,967.0,6.06
+2018,Trabajador estacional temporero,121.0,1149.0,9.48
+2018,Tratamiento de salud voluntario,170.0,1392.0,8.18
+2018,Turismo cultural,172.0,1059.0,6.16
+2018,Turismo de sol y playa,130.0,1086.0,8.35
+2018,Visitas a familiares o amigos,100.0,848.0,8.51
+2019,"Asistencia a ferias, congresos y convenciones",299.0,1367.0,4.57
+2019,"Compras, servicios personales",129.0,544.0,4.22
+2019,Estudios (educacion y formacion),93.0,3061.0,32.92
+2019,Motivos religiosos o peregrinaciones,112.0,1508.0,13.49
+2019,"Negocio, motivos profesionales",218.0,1117.0,5.12
+2019,"Ocio, recreo y vacaciones",157.0,1100.0,7.0
+2019,Otro tipo de ocio,176.0,1110.0,6.3
+2019,Otros,111.0,648.0,5.83
+2019,Otros motivos de trabajo y negocio,228.0,1107.0,4.85
+2019,Practica deportiva,156.0,947.0,6.08
+2019,Trabajador estacional temporero,112.0,1091.0,9.72
+2019,Tratamiento de salud voluntario,191.0,1569.0,8.21
+2019,Turismo cultural,183.0,1061.0,5.78
+2019,Turismo de sol y playa,138.0,1118.0,8.12
+2019,Visitas a familiares o amigos,99.0,851.0,8.55
+2020,"Asistencia a ferias, congresos y convenciones",,,
+2020,"Compras, servicios personales",,,
+2020,Estudios (educacion y formacion),91.0,2786.0,30.56
+2020,Motivos religiosos o peregrinaciones,,,
+2020,"Negocio, motivos profesionales",184.0,1038.0,5.65
+2020,"Ocio, recreo y vacaciones",139.0,1055.0,7.57
+2020,Otro tipo de ocio,148.0,1084.0,7.33
+2020,Otros,93.0,676.0,7.25
+2020,Otros motivos de trabajo y negocio,191.0,1098.0,5.75
+2020,Practica deportiva,138.0,968.0,7.03
+2020,Trabajador estacional temporero,,,
+2020,Tratamiento de salud voluntario,144.0,1017.0,7.06
+2020,Turismo cultural,166.0,1014.0,6.09
+2020,Turismo de sol y playa,125.0,1060.0,8.46
+2020,Visitas a familiares o amigos,82.0,813.0,9.88
+2021,"Asistencia a ferias, congresos y convenciones",,,
+2021,"Compras, servicios personales",98.0,584.0,5.97
+2021,Estudios (educacion y formacion),86.0,3834.0,44.69
+2021,Motivos religiosos o peregrinaciones,99.0,1522.0,15.31
+2021,"Negocio, motivos profesionales",171.0,1076.0,6.3
+2021,"Ocio, recreo y vacaciones",142.0,1116.0,7.84
+2021,Otro tipo de ocio,139.0,1070.0,7.68
+2021,Otros,126.0,726.0,5.78
+2021,Otros motivos de trabajo y negocio,181.0,1112.0,6.14
+2021,Practica deportiva,152.0,1099.0,7.25
+2021,Trabajador estacional temporero,,,
+2021,Tratamiento de salud voluntario,152.0,1082.0,7.13
+2021,Turismo cultural,182.0,1120.0,6.17
+2021,Turismo de sol y playa,134.0,1144.0,8.53
+2021,Visitas a familiares o amigos,93.0,1079.0,11.63
+2022,"Asistencia a ferias, congresos y convenciones",306.0,1187.0,3.88
+2022,"Compras, servicios personales",153.0,754.0,4.94
+2022,Estudios (educacion y formacion),96.0,4724.0,49.19
+2022,Motivos religiosos o peregrinaciones,162.0,1594.0,9.86
+2022,"Negocio, motivos profesionales",203.0,1240.0,6.1
+2022,"Ocio, recreo y vacaciones",167.0,1208.0,7.23
+2022,Otro tipo de ocio,172.0,1166.0,6.79
+2022,Otros,158.0,750.0,4.74
+2022,Otros motivos de trabajo y negocio,212.0,1271.0,6.0
+2022,Practica deportiva,176.0,1223.0,6.95
+2022,Trabajador estacional temporero,105.0,914.0,8.66
+2022,Tratamiento de salud voluntario,214.0,1536.0,7.19
+2022,Turismo cultural,205.0,1251.0,6.11
+2022,Turismo de sol y playa,152.0,1219.0,8.05
+2022,Visitas a familiares o amigos,105.0,1073.0,10.22
+2023,"Asistencia a ferias, congresos y convenciones",289.0,1250.0,4.33
+2023,"Compras, servicios personales",133.0,684.0,5.15
+2023,Estudios (educacion y formacion),102.0,4383.0,43.09
+2023,Motivos religiosos o peregrinaciones,172.0,1886.0,10.95
+2023,"Negocio, motivos profesionales",216.0,1337.0,6.18
+2023,"Ocio, recreo y vacaciones",184.0,1266.0,6.89
+2023,Otro tipo de ocio,192.0,1238.0,6.44
+2023,Otros,150.0,898.0,6.01
+2023,Otros motivos de trabajo y negocio,232.0,1325.0,5.71
+2023,Practica deportiva,178.0,1206.0,6.79
+2023,Trabajador estacional temporero,128.0,1503.0,11.74
+2023,Tratamiento de salud voluntario,130.0,1456.0,11.22
+2023,Turismo cultural,208.0,1309.0,6.29
+2023,Turismo de sol y playa,166.0,1270.0,7.65
+2023,Visitas a familiares o amigos,112.0,1075.0,9.56
+2024,"Asistencia a ferias, congresos y convenciones",348.0,1410.0,4.06
+2024,"Compras, servicios personales",,,
+2024,Estudios (educacion y formacion),112.0,5554.0,49.69
+2024,Motivos religiosos o peregrinaciones,188.0,1725.0,9.2
+2024,"Negocio, motivos profesionales",241.0,1381.0,5.73
+2024,"Ocio, recreo y vacaciones",194.0,1329.0,6.84
+2024,Otro tipo de ocio,198.0,1263.0,6.37
+2024,Otros,145.0,833.0,5.72
+2024,Otros motivos de trabajo y negocio,246.0,1384.0,5.63
+2024,Practica deportiva,188.0,1203.0,6.39
+2024,Trabajador estacional temporero,173.0,1332.0,7.69
+2024,Tratamiento de salud voluntario,,,
+2024,Turismo cultural,235.0,1366.0,5.82
+2024,Turismo de sol y playa,175.0,1364.0,7.78
+2024,Visitas a familiares o amigos,118.0,1152.0,9.78
